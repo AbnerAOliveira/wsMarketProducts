@@ -20,7 +20,7 @@ class CreateOrdersTable extends Migration
                 ->references('id')
                 ->on('customers')->onDelete('cascade');
             $table->string('pay_method');
-            $table->decimal('price_total', $places = 2);
+            $table->decimal('price_total', 8, 2);
             $table->timestamps();
         });
     }
